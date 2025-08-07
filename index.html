@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="
+https://cdn.jsdelivr.net/npm/short-unique-id@5.2.0/dist/short-unique-id.min.js
+"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <section class="todoapp">
+        <header class="header">
+          <h1>todos</h1>
+          <form id="todo-create-form">
+            <div class="iconimg"></div>
+            <input
+              type="text"
+              class="new-todo"
+              placeholder="What needs to be done?"
+            />
+          </form>
+        </header>
+        <section class="main">
+          <ul class="todo-list">
+            <!-- <li class="li-element completed">
+        <div class="view">
+            <div class="todo-text">
+         <input class="toggle" type="checkbox">
+         <label for="Checkboxelement" class="label-element">html</label>
+            </div>
+            <button class="delete-btn">x</button>
+        </div>
+    </li> -->
+            <!-- <li></li> -->
+          </ul>
+        </section>
+        <footer class="footer">
+          <span><strong class="span-items">0</strong> items left</span>
+          <ul class="footer-ul">
+            <li class="li-active active" id="allclick">All</li>
+            <li class="li-active" id="activeclick">Active</li>
+            <li class="li-active" id="completedclick">Completed</li>
+          </ul>
+          <button class="clear-btn">Clear completed</button>
+        </footer>
+      </section>
+    </div>
+    <section class="footer-end">
+      <div class="footer-text">
+        <p>Click to edit a todo</p>
+        <p>Created by Shabnam</p>
+        <p>Source Code</p>
+      </div>
+    </section>
+  </body>
+</html>

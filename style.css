@@ -1,0 +1,227 @@
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f5f5f5;
+  color: #4d4d4d;
+  font: 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: 0 auto;
+  max-width: 550px;
+  min-width: 230px;
+}
+.todoapp {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  margin: 130px 0 40px;
+  position: relative;
+}
+.header h1 {
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+  font: 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: -125px;
+  width: 100%;
+  font-size: 100px;
+}
+form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.new-todo {
+  background: #fff;
+  border: none;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  padding: 16px 16px 16px 60px;
+  outline: none;
+  font-size: 20px;
+  font-style: italic;
+  width: 100%;
+}
+.new-todo::placeholder {
+  color: #e6e6e6;
+  font-size: 24px;
+}
+.iconimg::before {
+  color: #e6e6e6;
+  content: "❯";
+  font-size: 22px;
+  padding: 10px 27px;
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  transform: rotate(90deg);
+}
+.todo-list {
+  list-style-type: none;
+  border: transparent;
+}
+.todo-list .li-element {
+  list-style-type: none;
+}
+.todo-list .li-element .view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid #e6e6e6;
+  height: auto;
+}
+.todo-list .li-element .view .todo-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+input[type="checkbox"] {
+  appearance: none;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✓";
+  text-align: center;
+  color: green;
+}
+
+.label-element::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.li-element.checked .label-element {
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+.todo-list .li-element .view .delete-btn {
+  color: #cc9a9a;
+  display: none;
+  font-size: 25px;
+  height: 30px;
+  transition: color 0.2s ease-out;
+  width: 30px;
+  border: transparent;
+  background-color: transparent;
+  position: absolute;
+  right: 5px;
+}
+.todo-list .li-element:hover .delete-btn {
+  display: inline-block;
+}
+.todo-list .li-element .view .todo-text label {
+  font: 24px Helvetica, sans-serif;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e6e6e6;
+  color: #777;
+  height: 20px;
+  padding: 20px 15px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+.footer::before {
+  bottom: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+    0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6,
+    0 17px 2px -6px rgba(0, 0, 0, 0.2);
+  content: "";
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+}
+.footer span {
+  display: flex;
+  gap: 2px;
+}
+.footer span strong {
+  font-weight: 300;
+}
+.footer .footer-ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.footer .footer-ul li {
+  font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: inherit;
+  cursor: pointer;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+.footer .footer-ul li.selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+.footer .footer-ul li:hover {
+  border: 1px solid;
+  border-color: rgba(175, 47, 47, 0.1);
+}
+.li-active:hover {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+.footer-ul li {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: inherit;
+  cursor: pointer;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+.footer .clear-btn {
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #777;
+}
+.footer .clear-btn:hover {
+  text-decoration: underline;
+}
+.active {
+  border: 1px solid;
+  border-color: rgba(219, 11, 11, 0.2) !important;
+}
+.footer-end {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #9f9c9c;
+  text-align: center;
+  margin-top: 65px;
+}
