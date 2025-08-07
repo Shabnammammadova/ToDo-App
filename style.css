@@ -225,3 +225,17 @@ input[type="checkbox"]:checked::before {
   text-align: center;
   margin-top: 65px;
 }
+.githublink {
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: #9f9c9c;
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none !important;
+  color: #9f9c9c;
+}
